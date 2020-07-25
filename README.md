@@ -1,0 +1,1 @@
+https://mdbootstrap.com/docs/jquery/tables/search/#docsTabsOverview
