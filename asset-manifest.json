@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mezidia-jobs/static/css/main.5f361e03.chunk.css",
+    "main.js": "/mezidia-jobs/static/js/main.21e70151.chunk.js",
+    "main.js.map": "/mezidia-jobs/static/js/main.21e70151.chunk.js.map",
+    "runtime-main.js": "/mezidia-jobs/static/js/runtime-main.f4d59753.js",
+    "runtime-main.js.map": "/mezidia-jobs/static/js/runtime-main.f4d59753.js.map",
+    "static/js/2.54df3dbd.chunk.js": "/mezidia-jobs/static/js/2.54df3dbd.chunk.js",
+    "static/js/2.54df3dbd.chunk.js.map": "/mezidia-jobs/static/js/2.54df3dbd.chunk.js.map",
+    "index.html": "/mezidia-jobs/index.html",
+    "precache-manifest.2a9dd070dcb6ad39acf2cb7f01225e7d.js": "/mezidia-jobs/precache-manifest.2a9dd070dcb6ad39acf2cb7f01225e7d.js",
+    "service-worker.js": "/mezidia-jobs/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/mezidia-jobs/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.54df3dbd.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.54df3dbd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/mezidia-jobs/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4d59753.js",
+    "static/js/2.54df3dbd.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.21e70151.chunk.js"
+  ]
+}
