@@ -1,9 +1,10 @@
 import React from 'react';
+import Table from './components/Table';
 
 function App() {
   return (
     <div>
-      <p class="h1 mb-4">Sign in</p>
+      <Table />
     </div>
   );
 }
