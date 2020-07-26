@@ -503,7 +503,6 @@ const Table = props => {
 
   return (
     <MDBDataTable
-      striped
       bordered
       hover
       data={data}
