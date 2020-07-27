@@ -49,7 +49,7 @@ const Table = props => {
       name: job.id,
       position: job.userId,
       office: job.title,
-      age: job.completed,
+      age: job.completed.toString(),
       date: job.id,
       salary: job.id
     });
