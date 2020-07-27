@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/mezidia-jobs/static/css/main.f4adc056.chunk.css",
-    "main.js": "/mezidia-jobs/static/js/main.c54cb1f4.chunk.js",
-    "main.js.map": "/mezidia-jobs/static/js/main.c54cb1f4.chunk.js.map",
+    "main.js": "/mezidia-jobs/static/js/main.b2f80254.chunk.js",
+    "main.js.map": "/mezidia-jobs/static/js/main.b2f80254.chunk.js.map",
     "runtime-main.js": "/mezidia-jobs/static/js/runtime-main.f4d59753.js",
     "runtime-main.js.map": "/mezidia-jobs/static/js/runtime-main.f4d59753.js.map",
     "static/css/2.6f265792.chunk.css": "/mezidia-jobs/static/css/2.6f265792.chunk.css",
-    "static/js/2.1496a596.chunk.js": "/mezidia-jobs/static/js/2.1496a596.chunk.js",
-    "static/js/2.1496a596.chunk.js.map": "/mezidia-jobs/static/js/2.1496a596.chunk.js.map",
+    "static/js/2.87da634b.chunk.js": "/mezidia-jobs/static/js/2.87da634b.chunk.js",
+    "static/js/2.87da634b.chunk.js.map": "/mezidia-jobs/static/js/2.87da634b.chunk.js.map",
     "index.html": "/mezidia-jobs/index.html",
-    "precache-manifest.8c25f162647cde58c668271cf2a4aecf.js": "/mezidia-jobs/precache-manifest.8c25f162647cde58c668271cf2a4aecf.js",
+    "precache-manifest.c41dc6f121558ef2d20f0d9f773f7775.js": "/mezidia-jobs/precache-manifest.c41dc6f121558ef2d20f0d9f773f7775.js",
     "service-worker.js": "/mezidia-jobs/service-worker.js",
     "static/css/2.6f265792.chunk.css.map": "/mezidia-jobs/static/css/2.6f265792.chunk.css.map",
     "static/css/main.f4adc056.chunk.css.map": "/mezidia-jobs/static/css/main.f4adc056.chunk.css.map",
-    "static/js/2.1496a596.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.1496a596.chunk.js.LICENSE.txt",
+    "static/js/2.87da634b.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.87da634b.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/mezidia-jobs/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/mezidia-jobs/static/media/fa-solid-900.ee09ad75.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.f4d59753.js",
     "static/css/2.6f265792.chunk.css",
-    "static/js/2.1496a596.chunk.js",
+    "static/js/2.87da634b.chunk.js",
     "static/css/main.f4adc056.chunk.css",
-    "static/js/main.c54cb1f4.chunk.js"
+    "static/js/main.b2f80254.chunk.js"
   ]
 }
