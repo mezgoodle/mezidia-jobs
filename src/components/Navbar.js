@@ -62,6 +62,6 @@ class Navbar extends Component {
 			</Router>
 			);
 		}
-	}
+	};
 
 export default Navbar;
