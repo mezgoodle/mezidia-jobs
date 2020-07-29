@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mezidia-jobs/static/css/main.f4adc056.chunk.css",
-    "main.js": "/mezidia-jobs/static/js/main.fb928719.chunk.js",
-    "main.js.map": "/mezidia-jobs/static/js/main.fb928719.chunk.js.map",
+    "main.js": "/mezidia-jobs/static/js/main.db520b6a.chunk.js",
+    "main.js.map": "/mezidia-jobs/static/js/main.db520b6a.chunk.js.map",
     "runtime-main.js": "/mezidia-jobs/static/js/runtime-main.f4d59753.js",
     "runtime-main.js.map": "/mezidia-jobs/static/js/runtime-main.f4d59753.js.map",
     "static/css/2.6f265792.chunk.css": "/mezidia-jobs/static/css/2.6f265792.chunk.css",
     "static/js/2.87da634b.chunk.js": "/mezidia-jobs/static/js/2.87da634b.chunk.js",
     "static/js/2.87da634b.chunk.js.map": "/mezidia-jobs/static/js/2.87da634b.chunk.js.map",
     "index.html": "/mezidia-jobs/index.html",
-    "precache-manifest.f0d3cfe33e9ea44f67ef469754162289.js": "/mezidia-jobs/precache-manifest.f0d3cfe33e9ea44f67ef469754162289.js",
+    "precache-manifest.34a69d894f4a1b74c4690bf6485e870e.js": "/mezidia-jobs/precache-manifest.34a69d894f4a1b74c4690bf6485e870e.js",
     "service-worker.js": "/mezidia-jobs/service-worker.js",
     "static/css/2.6f265792.chunk.css.map": "/mezidia-jobs/static/css/2.6f265792.chunk.css.map",
     "static/css/main.f4adc056.chunk.css.map": "/mezidia-jobs/static/css/main.f4adc056.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.6f265792.chunk.css",
     "static/js/2.87da634b.chunk.js",
     "static/css/main.f4adc056.chunk.css",
-    "static/js/main.fb928719.chunk.js"
+    "static/js/main.db520b6a.chunk.js"
   ]
 }
