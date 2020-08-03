@@ -2,6 +2,7 @@ import React from 'react';
 import Table from './components/Table';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Form from './components/Form';
 import { MDBContainer } from 'mdbreact';
 
 class App extends React.Component {
@@ -41,10 +42,8 @@ class App extends React.Component {
           purus sit amet fermentum.</p>
           </div>
         </MDBContainer>
-        <MDBContainer>
-          
-        </MDBContainer>
-        <Table jobs={this.state}/>
+        <Table jobs={this.state} />
+        <Form />
         <Footer />
       </div>
     )
