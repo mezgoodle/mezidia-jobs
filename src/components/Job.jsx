@@ -16,10 +16,11 @@ export default function Job({ job }) {
             </Card.Subtitle>
             <Badge variant="secondary" className="mr-2">{job.type}</Badge>
             <Badge variant="secondary">{job.location}</Badge>
-            <div>
+            <div style={{ wordBreak: 'break-all' }}>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
           </div>
+          <img className="d-none d-md-block" height="50" src={job.company_logo} alt={job.company} />
         </div>
       </Card.Body>
     </Card>
