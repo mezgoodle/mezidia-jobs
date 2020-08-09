@@ -12,13 +12,13 @@ const App = () => {
   return (
     <Container className="my-4">
       <h1 className="mb-4">GitHub Jobs</h1>
-      <JobsPagination page={page} setPage={setPage} />
+      <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try refreshing.</h1>}
       {jobs.map(job => {
         return <Job key={job.id} job={job} />
       })}
-      <JobsPagination page={page} setPage={setPage} />
+      <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
     </Container>
   )
 }
