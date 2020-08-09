@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBDataTable } from 'mdbreact';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Table = props => {
   const data = {
@@ -51,7 +52,7 @@ const Table = props => {
       office: job.title,
       age: job.completed.toString(),
       date: job.id,
-      salary: job.id
+      salary: <Router><Link to="/navbar">{job.id}</Link></Router>,
     });
   }
 
