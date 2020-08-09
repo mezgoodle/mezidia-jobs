@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mezidia-jobs/precache-manifest.579a98aa1c3a9a0a843392ff7936243a.js"
+  "/mezidia-jobs/precache-manifest.33a43f564911885beffaef7ace4ae595.js"
 );
 
 self.addEventListener('message', (event) => {
