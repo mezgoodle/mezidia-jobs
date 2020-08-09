@@ -34,6 +34,7 @@ export default function useFetchJobs(params, page) {
     }).then(res => {
       dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
     }).catch(e => {
+      if (axios.isCancel(e)) return
       dispatch({ type: ACTIONS.ERROR, payload: { error: e } })
     })
 
