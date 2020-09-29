@@ -37,7 +37,7 @@ Here you can see build status of [continuous integration](https://en.wikipedia.o
 
 [![Theme](https://img.shields.io/badge/Theme-REST_API-brightgreen?style=flat-square)](https://uk.wikipedia.org/wiki/REST)
 [![Platform](https://img.shields.io/badge/Platform-NodeJS-brightgreen?style=flat-square)](https://nodejs.org/uk/)
- 
+
 ## Screenshots
 
 - Loading screen
