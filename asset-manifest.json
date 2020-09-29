@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mezidia-jobs/static/css/main.c57c6f3c.chunk.css",
+    "main.css": "/mezidia-jobs/static/css/main.bcad9457.chunk.css",
     "main.js": "/mezidia-jobs/static/js/main.64c318e6.chunk.js",
     "main.js.map": "/mezidia-jobs/static/js/main.64c318e6.chunk.js.map",
     "runtime-main.js": "/mezidia-jobs/static/js/runtime-main.f4d59753.js",
@@ -8,15 +8,15 @@
     "static/js/2.ff11dcac.chunk.js": "/mezidia-jobs/static/js/2.ff11dcac.chunk.js",
     "static/js/2.ff11dcac.chunk.js.map": "/mezidia-jobs/static/js/2.ff11dcac.chunk.js.map",
     "index.html": "/mezidia-jobs/index.html",
-    "precache-manifest.3455069eb3f4490c35a2b74a1cd657e9.js": "/mezidia-jobs/precache-manifest.3455069eb3f4490c35a2b74a1cd657e9.js",
+    "precache-manifest.f4e43730a3da323ff60b692adb6c2a11.js": "/mezidia-jobs/precache-manifest.f4e43730a3da323ff60b692adb6c2a11.js",
     "service-worker.js": "/mezidia-jobs/service-worker.js",
-    "static/css/main.c57c6f3c.chunk.css.map": "/mezidia-jobs/static/css/main.c57c6f3c.chunk.css.map",
+    "static/css/main.bcad9457.chunk.css.map": "/mezidia-jobs/static/css/main.bcad9457.chunk.css.map",
     "static/js/2.ff11dcac.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.ff11dcac.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f4d59753.js",
     "static/js/2.ff11dcac.chunk.js",
-    "static/css/main.c57c6f3c.chunk.css",
+    "static/css/main.bcad9457.chunk.css",
     "static/js/main.64c318e6.chunk.js"
   ]
 }
