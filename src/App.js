@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import useFetchJobs from './useFetchJobs';
-import Job from './components/Job';
-import JobsPagination from './components/JobsPagination';
-import SearchForm from './components/SearchForm';
-import NavbarComponent from './components/Navbar';
-import FooterComponent from './components/Footer';
+import React, { useState } from 'react'
+import { Container } from 'react-bootstrap'
+import useFetchJobs from './useFetchJobs'
+import Job from './components/Job'
+import JobsPagination from './components/JobsPagination'
+import SearchForm from './components/SearchForm'
+import NavbarComponent from './components/Navbar'
+import FooterComponent from './components/Footer'
 
 const App = () => {
-  const [params, setParams] = useState({});
-  const [page, setPage] = useState(1);
-  const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page);
+  const [params, setParams] = useState({})
+  const [page, setPage] = useState(1)
+  const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
 
   const handleParamChange = (e) => {
-    const param = e.target.name;
-    const value = e.target.value;
-    setPage(1);
+    const param = e.target.name
+    const value = e.target.value
+    setPage(1)
     setParams(prevParams => {
-      return { ...prevParams, [param]: value}
+      return { ...prevParams, [param]: value }
     })
   }
 
   return (
     <div>
       <NavbarComponent />
-      <Container className="my-4">    
-        <h1 className="mb-4">Mezidia Jobs</h1>
+      <Container className='my-4'>
+        <h1 className='mb-4'>Mezidia Jobs</h1>
         <SearchForm params={params} onParamChange={handleParamChange} />
         <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
         {loading && <h1>Loading...</h1>}
@@ -40,4 +40,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App

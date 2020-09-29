@@ -1,11 +1,11 @@
-import { useReducer, useEffect } from 'react';
-import axios from 'axios';
+import { useReducer, useEffect } from 'react'
+import axios from 'axios'
 
 const ACTIONS = {
   MAKE_REQUEST: 'make-request',
   GET_DATA: 'get-data',
   ERROR: 'error',
-  UPDATE_HAS_NEXT_PAGE: 'update-has-next-page',
+  UPDATE_HAS_NEXT_PAGE: 'update-has-next-page'
 }
 
 const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://flask-jobs.herokuapp.com/job'
@@ -29,7 +29,7 @@ export default function useFetchJobs(params, page) {
   const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true })
 
   useEffect(() => {
-    const cancelToken1 = axios.CancelToken.source();
+    const cancelToken1 = axios.CancelToken.source()
     dispatch({ type: ACTIONS.MAKE_REQUEST })
     axios.get(BASE_URL, {
       cancelToken: cancelToken1.token,
@@ -41,7 +41,7 @@ export default function useFetchJobs(params, page) {
       dispatch({ type: ACTIONS.ERROR, payload: { error: e } })
     })
 
-    const cancelToken2 = axios.CancelToken.source();
+    const cancelToken2 = axios.CancelToken.source()
     axios.get(BASE_URL, {
       cancelToken: cancelToken2.token,
       params: { markdown: true, page: page + 1, ...params }
@@ -53,8 +53,8 @@ export default function useFetchJobs(params, page) {
     })
 
     return () => {
-      cancelToken1.cancel();
-      cancelToken2.cancel();
+      cancelToken1.cancel()
+      cancelToken2.cancel()
     }
   }, [params, page])
 
