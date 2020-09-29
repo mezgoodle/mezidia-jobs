@@ -192,7 +192,7 @@ and open `http://localhost:3000/` in browser
 
 ## Contribute
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](link).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](https://github.com/mezidia/mezidia-jobs/blob/master/CONTRIBUTING.md).
 
 ## Credits
 
