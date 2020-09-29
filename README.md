@@ -1,68 +1,206 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mezidia jobs
 
-## Available Scripts
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
 
-### `npm start`
+[![Language](https://img.shields.io/badge/language-javascript-brightgreen?style=flat-square)](https://developer.mozilla.org/uk/docs/Web/JavaScript)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Hello everyone! This is the site, that shows available jobs in **Mezidia** organization.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of contents
 
-### `npm test`
+## Motivation
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Build status
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here you can see build status of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)/[continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment):
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Lint Code Base](https://github.com/mezidia/mezidia-jobs/workflows/Lint%20Code%20Base/badge.svg)
+![Build and Deploy](https://github.com/mezidia/mezidia-jobs/workflows/Build%20and%20Deploy/badge.svg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Badges
 
-### `npm run eject`
+[![Theme](https://img.shields.io/badge/Theme-REST_API-brightgreen?style=flat-square)](https://uk.wikipedia.org/wiki/REST)
+[![Platform](https://img.shields.io/badge/Platform-NodeJS-brightgreen?style=flat-square)](https://nodejs.org/uk/)
+ 
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Loading screen
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot 1](https://raw.githubusercontent.com/mezgoodle/images/master/mezidia-jobs1.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Main page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Screenshot 2](https://raw.githubusercontent.com/mezgoodle/images/master/mezidia-jobs.png)
 
-## Learn More
+## Tech/framework used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Built with**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Node.js](https://nodejs.org/uk/)
+- [React](https://uk.reactjs.org/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
 
-### Code Splitting
+## Features
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+On the website you can **see** all available jobs, **filter** only _full-time jobe_, **search** vacancies.
 
-### Analyzing the Bundle Size
+## Code Example
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Fetch jobs
 
-### Making a Progressive Web App
+```js
+import { useReducer, useEffect } from 'react'
+import axios from 'axios'
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+const ACTIONS = {
+  MAKE_REQUEST: 'make-request',
+  GET_DATA: 'get-data',
+  ERROR: 'error',
+  UPDATE_HAS_NEXT_PAGE: 'update-has-next-page'
+}
 
-### Advanced Configuration
+const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://flask-jobs.herokuapp.com/job'
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.MAKE_REQUEST:
+      return { loading: true, jobs: [] }
+    case ACTIONS.GET_DATA:
+      return { ...state, loading: false, jobs: action.payload.jobs }
+    case ACTIONS.ERROR:
+      return { ...state, loading: false, error: action.payload.jobs, jobs: [] }
+    case ACTIONS.UPDATE_HAS_NEXT_PAGE:
+      return { ...state, hasNextPage: action.payload.hasNextPage }
+    default:
+      return state
+  }
+}
 
-### Deployment
+export default function useFetchJobs (params, page) {
+  const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true })
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  useEffect(() => {
+    const cancelToken1 = axios.CancelToken.source()
+    dispatch({ type: ACTIONS.MAKE_REQUEST })
+    axios.get(BASE_URL, {
+      cancelToken: cancelToken1.token,
+      params: { markdown: true, page: page, ...params }
+    }).then(res => {
+      dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
+    }).catch(e => {
+      if (axios.isCancel(e)) return
+      dispatch({ type: ACTIONS.ERROR, payload: { error: e } })
+    })
 
-### `npm run build` fails to minify
+    const cancelToken2 = axios.CancelToken.source()
+    axios.get(BASE_URL, {
+      cancelToken: cancelToken2.token,
+      params: { markdown: true, page: page + 1, ...params }
+    }).then(res => {
+      dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } })
+    }).catch(e => {
+      if (axios.isCancel(e)) return
+      dispatch({ type: ACTIONS.ERROR, payload: { error: e } })
+    })
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    return () => {
+      cancelToken1.cancel()
+      cancelToken2.cancel()
+    }
+  }, [params, page])
+
+  return state
+}
+```
+
+- Main file
+
+```js
+import React, { useState } from 'react'
+import { Container } from 'react-bootstrap'
+import useFetchJobs from './useFetchJobs'
+import Job from './components/Job'
+import JobsPagination from './components/JobsPagination'
+import SearchForm from './components/SearchForm'
+import NavbarComponent from './components/Navbar'
+import FooterComponent from './components/Footer'
+
+const App = () => {
+  const [params, setParams] = useState({})
+  const [page, setPage] = useState(1)
+  const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
+
+  const handleParamChange = (e) => {
+    const param = e.target.name
+    const value = e.target.value
+    setPage(1)
+    setParams(prevParams => {
+      return { ...prevParams, [param]: value }
+    })
+  }
+
+  return (
+    <div>
+      <NavbarComponent />
+      <Container className='my-4'>
+        <h1 className='mb-4'>Mezidia Jobs</h1>
+        <SearchForm params={params} onParamChange={handleParamChange} />
+        <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
+        {loading && <h1>Loading...</h1>}
+        {error && <h1>Error. Try refreshing.</h1>}
+        {jobs.map(job => {
+          return <Job key={job.id} job={job} />
+        })}
+        <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
+        <FooterComponent />
+      </Container>
+    </div>
+  )
+}
+
+export default App
+```
+
+## Installation
+
+1. Clone this repository by the command in terminal or by [GitHub CLI](https://cli.github.com/):
+
+```bash
+# git
+git clone https://github.com/mezidia/mezidia-jobs.git
+# GitHub CLI
+gh repo clone mezidia/mezidia-jobs
+```
+
+2. Install packages by [npm](https://www.npmjs.com/):
+
+```bash
+npm install
+```
+
+## Fast usage
+
+Just type in a terminal:
+
+```bash
+npm start
+```
+
+and open `http://localhost:3000/` in browser
+
+## Contribute
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](link).
+
+## Credits
+
+Links to article and videos which inspired me to build this project:
+
+- [Deploy React project to github-pages by CI](https://github.com/marketplace/actions/deploy-to-github-pages)
+- [Lesson on YouTube about this project](https://www.youtube.com/watch?v=fxY1q4SCB64)
+
+## License
+
+MIT © [mezgoodle](https://github.com/mezgoodle)
