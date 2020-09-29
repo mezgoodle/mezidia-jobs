@@ -9,8 +9,22 @@ Hello everyone! This is the site, that shows available jobs in **Mezidia** organ
 
 ## Table of contents
 
+- [Motivation](#motivation)
+- [Build status](#build-status)
+- [Badges](#badges)
+- [Screenshots](#screenshots)
+- [Tech/framework used](#techframework-used)
+- [Features](#features)
+- [Code Example](#code-example)
+- [Installation](#installation)
+- [Fast usage](#fast-usage)
+- [Contribute](#contribute)
+- [Credits](#credits)
+- [License](#license)
+
 ## Motivation
 
+Once I saw a [lesson](https://www.youtube.com/watch?v=fxY1q4SCB64) on _YouTube_ on React-Hooks. I wanted to repeat this project while developing [API](https://github.com/mezidia/flask-jobs).
 
 ## Build status
 
