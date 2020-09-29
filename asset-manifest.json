@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/mezidia-jobs/static/css/main.f4adc056.chunk.css",
-    "main.js": "/mezidia-jobs/static/js/main.82797e8d.chunk.js",
-    "main.js.map": "/mezidia-jobs/static/js/main.82797e8d.chunk.js.map",
+    "main.js": "/mezidia-jobs/static/js/main.ff1c1ee6.chunk.js",
+    "main.js.map": "/mezidia-jobs/static/js/main.ff1c1ee6.chunk.js.map",
     "runtime-main.js": "/mezidia-jobs/static/js/runtime-main.f4d59753.js",
     "runtime-main.js.map": "/mezidia-jobs/static/js/runtime-main.f4d59753.js.map",
-    "static/js/2.a6d28fda.chunk.js": "/mezidia-jobs/static/js/2.a6d28fda.chunk.js",
-    "static/js/2.a6d28fda.chunk.js.map": "/mezidia-jobs/static/js/2.a6d28fda.chunk.js.map",
+    "static/js/2.75abcfe5.chunk.js": "/mezidia-jobs/static/js/2.75abcfe5.chunk.js",
+    "static/js/2.75abcfe5.chunk.js.map": "/mezidia-jobs/static/js/2.75abcfe5.chunk.js.map",
     "index.html": "/mezidia-jobs/index.html",
-    "precache-manifest.d68589704bf79873b40d28ead1ac366e.js": "/mezidia-jobs/precache-manifest.d68589704bf79873b40d28ead1ac366e.js",
+    "precache-manifest.5ddbeb7e3a8e97afe0946e479bc971b6.js": "/mezidia-jobs/precache-manifest.5ddbeb7e3a8e97afe0946e479bc971b6.js",
     "service-worker.js": "/mezidia-jobs/service-worker.js",
     "static/css/main.f4adc056.chunk.css.map": "/mezidia-jobs/static/css/main.f4adc056.chunk.css.map",
-    "static/js/2.a6d28fda.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.a6d28fda.chunk.js.LICENSE.txt"
+    "static/js/2.75abcfe5.chunk.js.LICENSE.txt": "/mezidia-jobs/static/js/2.75abcfe5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f4d59753.js",
-    "static/js/2.a6d28fda.chunk.js",
+    "static/js/2.75abcfe5.chunk.js",
     "static/css/main.f4adc056.chunk.css",
-    "static/js/main.82797e8d.chunk.js"
+    "static/js/main.ff1c1ee6.chunk.js"
   ]
 }
