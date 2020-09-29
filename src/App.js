@@ -5,6 +5,7 @@ import Job from './components/Job';
 import JobsPagination from './components/JobsPagination';
 import SearchForm from './components/SearchForm';
 import NavbarComponent from './components/Navbar';
+import FooterComponent from './components/Footer';
 
 const App = () => {
   const [params, setParams] = useState({});
@@ -33,6 +34,7 @@ const App = () => {
           return <Job key={job.id} job={job} />
         })}
         <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
+        <FooterComponent />
       </Container>
     </div>
   )
