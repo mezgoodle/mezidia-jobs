@@ -2,10 +2,11 @@
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
 [![Language](https://img.shields.io/badge/language-javascript-brightgreen?style=flat-square)](https://developer.mozilla.org/uk/docs/Web/JavaScript)
 
 Hello everyone! This is the site, that shows available jobs in **Mezidia** organization.
+
+> The project is experimental
 
 ## Table of contents
 
