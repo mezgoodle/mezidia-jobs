@@ -22,3 +22,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
